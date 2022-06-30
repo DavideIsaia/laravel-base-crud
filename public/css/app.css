@@ -12165,3 +12165,7 @@ img {
   max-width: 300px;
 }
 
+textarea {
+  height: 15rem;
+}
+
