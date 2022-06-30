@@ -12161,3 +12161,7 @@ ul {
   font-size: 1.5rem;
 }
 
+img {
+  max-width: 300px;
+}
+
