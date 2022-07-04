@@ -12149,6 +12149,10 @@ fieldset:disabled .btn {
   }
 }
 
+body {
+  background-color: #d5dfff;
+}
+
 ul {
   list-style: none;
 }
@@ -12167,6 +12171,7 @@ textarea {
 }
 
 .my-card {
+  background-color: white;
   transition: 0.3s;
 }
 
