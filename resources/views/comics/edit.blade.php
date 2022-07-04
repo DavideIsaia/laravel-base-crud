@@ -2,9 +2,11 @@
 
 @section('main_content')
 <div class="container">
-  <h1>Inserisci un nuovo fumetto</h1>
-  <form action="{{ route('comics.store') }}" method="post" class="row g-3">
+  <h1>Modifica informazioni fumetto</h1>
+
+  <form action="{{ route('comics.update', ['comic' => $current_comic->id]) }}" method="post" class="row g-3">
     @csrf
+    @method('put')
 
     <div class="col-12 mb-3">
       <label for="title" class="form-label">Titolo (Max 100 caratteri)</label>
@@ -37,5 +39,16 @@
 
     <button type="submit" class="btn btn-primary">Aggiungi</button>
   </form>
+
+  @if ($errors->any())
+    <div class="alert alert-danger">
+      <ul>
+        @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
+
 </div>
 @endsection
