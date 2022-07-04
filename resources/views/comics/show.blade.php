@@ -13,7 +13,7 @@
         <h4>Prezzo: {{ $current_comic->price }}$</h4>      
       </div>          
       <a class="btn btn-primary" href="{{ route('comics.edit', ['comic' => $current_comic->id]) }}">Modifica</a>
-      <form class="d-inline-block" action="{{ route('comics.destroy', [ 'comic' => $current_comic->id ]) }}" method="post">
+      <form class="d-inline-block" action="{{ route('comics.destroy', [ 'comic' => $current_comic->id ]) }}" method="post" onClick="return confirm('Sei sicuro?');">
         @csrf
         @method('delete')
         <button type="submit" class="btn btn-danger">Cancella</button>

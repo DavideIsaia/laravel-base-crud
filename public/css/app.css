@@ -12158,10 +12158,19 @@ ul {
 }
 
 img {
-  max-width: 300px;
+  width: 192px;
+  height: 291px;
 }
 
 textarea {
   height: 15rem;
+}
+
+.my-card {
+  transition: 0.3s;
+}
+
+.my-card:hover {
+  opacity: 0.7;
 }
 
