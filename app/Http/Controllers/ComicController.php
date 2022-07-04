@@ -98,10 +98,13 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $current_comic = Comic::findOrFail($id);
+        $current_comic->delete();
+        return redirect()->route('comics.index');
     }
 
-    private function getValidationRules() {
+    private function getValidationRules() 
+    {
         return [
             'title' => 'required|max:100',
             'description' => 'required',
